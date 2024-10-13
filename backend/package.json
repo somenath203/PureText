@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "scripts": {
+    "dev": "bun run --hot src/index.js",
+    "deploy_to_cloudfare_workers": "wrangler deploy --minify --name puretextsom src/index.js"
+  },
+  "dependencies": {
+    "@upstash/vector": "^1.1.7",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "hono": "^4.6.4",
+    "langchain": "^0.3.2"
+  },
+  "devDependencies": {
+    "wrangler": "^3.79.0"
+  }
+}
