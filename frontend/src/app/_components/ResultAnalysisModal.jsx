@@ -49,7 +49,7 @@ const ResultAnalysisModal = ({ openResultModalRef, inputTextOfUser, analysisData
               
               <span className="font-medium">According to the analysis, the text you provided contains offensive or vulgar language.</span>
               
-              <span className="text-gray-100">We detected the following offensive words in the sentence you provided:</span>
+              <span className="text-gray-100">We detected the following possible offensive texts in the sentence you provided:</span>
             
             </p>
 
@@ -61,7 +61,7 @@ const ResultAnalysisModal = ({ openResultModalRef, inputTextOfUser, analysisData
                   
                   <p className="text-white-200">
                     
-                    <span className="font-semibold text-gray-200">Detected Word: </span>
+                    <span className="font-semibold text-gray-200">Detected Text: </span>
                     
                     <span className="text-indigo-200 font-bold">{wordAndScore?.text}</span>
                   
@@ -81,7 +81,7 @@ const ResultAnalysisModal = ({ openResultModalRef, inputTextOfUser, analysisData
             ))}
 
             <p className="italic text-gray-200 my-4 text-lg">
-              Note: The words listed, along with their scores, may not be exact matches from the original sentence but are closely similar to offensive terms found in your text.
+              Note: The text listed, along with their scores, may not be exact matches from the original sentence but are closely similar to offensive terms found in your text.
             </p>
 
           </div>
