@@ -65,7 +65,7 @@ const Page = () => {
 
         <button 
           className="btn bg-indigo-400 hover:bg-indigo-500 capitalize rounded-2xl shadow-2xl text-2xl tracking-wider flex items-center justify-center w-60 h-20 font-semibold"
-          onClick={() => modalOpenRef.current.showModal()}
+          onClick={() => modalOpenRef?.current?.showModal()}
         >
           Try it Out
         </button>

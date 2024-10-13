@@ -1,4 +1,6 @@
 import localFont from "next/font/local";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 import "./globals.css";
 import Navbar from "./_components/Navbar";
@@ -29,6 +31,8 @@ export default function RootLayout({ children }) {
         <Navbar />
 
         {children}
+
+        <ToastContainer />
 
       </body>
     </html>

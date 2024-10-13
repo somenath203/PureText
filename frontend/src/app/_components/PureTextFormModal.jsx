@@ -1,23 +1,21 @@
 'use client';
 
-import { useRef, useState } from "react";
-import { Notyf } from 'notyf';
-import 'notyf/notyf.min.css';
+import { useRef, useState, useEffect } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 import ResultAnalysisModal from "./ResultAnalysisModal";
 
 
 const PureTextFormModal = ({ openModalRef }) => {
 
-  const notyf = new Notyf({
-    duration: 4000,
-    ripple: true,
-    position: {
-      x: 'right',
-      y: 'top'
-    }
-  });
+
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
 
   const [ inputText, setInputText ] = useState();
 
@@ -35,34 +33,51 @@ const PureTextFormModal = ({ openModalRef }) => {
 
       setLoading(true);
 
-      if (inputText.split(' ').length >= 150) {
+      if (inputText?.length >= 1000) {
 
-        notyf.error('the number of words should be greater than 150');
-
-      } else {
-
-        const { data } = await axios.post(process.env.NEXT_PUBLIC_HONO_BACKEND_URL, {
-          inputMessageByUserFromFrontend: inputText
+        toast.error('input text should not be more than 1000 character', {
+          position: "top-right",
+          autoClose: 8000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "dark",
         });
 
-        setResult(data);
+        return;
 
-        if(data) {
+      }
 
-          openModalRef.current.close();
-
-          openResultModal.current.showModal();
-
-        }
-
+      const { data } = await axios.post(process.env.NEXT_PUBLIC_HONO_BACKEND_URL, {
+        inputMessageByUserFromFrontend: inputText
+      });
+  
+      setResult(data);
+ 
+  
+      if(data) {
+  
+        openModalRef?.current?.close();
+  
+        openResultModal?.current?.showModal();
+  
       }
       
       
     } catch (error) {
       
-      console.log(error);
+      //console.log(error);
 
-      notyf.error(error || 'Something went wrong from the server side. Please try again after sometime.');
+      toast.error('Something went wrong from the server side. Please try again after sometime.', {
+        position: "top-right",
+        autoClose: 8000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "dark",
+      });
       
     } finally {
 
@@ -75,13 +90,13 @@ const PureTextFormModal = ({ openModalRef }) => {
 
   const closeModal = () => {
 
-    openModalRef.current.close();
+    openModalRef?.current?.close();
     
   }
 
   
   return (
-    <>
+    isMounted && <>
       <dialog id="my_modal_1" className="modal" ref={openModalRef}>
 
         <div className="modal-box flex flex-col gap-5">
@@ -92,7 +107,7 @@ const PureTextFormModal = ({ openModalRef }) => {
 
             <input
               type="text"
-              placeholder="enter your text here (max 150 words)"
+              placeholder="enter your text here (max 1000 characters)"
               className="input border-white"
               onChange={(e) => setInputText(e.target.value)}
               required

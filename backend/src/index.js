@@ -55,7 +55,7 @@ app.get('/', (c) => {
 });
 
 
-app.post('/check-profanity', async (c) => {
+app.post('/check-text-toxicity', async (c) => {
 
   try {
 

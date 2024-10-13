@@ -1,6 +1,16 @@
 'use client';
 
+import { useEffect, useState } from "react";
+
+
 const ResultAnalysisModal = ({ openResultModalRef, inputTextOfUser, analysisData }) => {
+
+  
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
 
   const formatScore = (score) => {
@@ -12,13 +22,13 @@ const ResultAnalysisModal = ({ openResultModalRef, inputTextOfUser, analysisData
 
   const closeModal = () => {
 
-    openResultModalRef.current.close();
+    openResultModalRef?.current?.close();
 
   }
   
 
   return (
-    <dialog id="my_modal_1" className="modal" ref={openResultModalRef}>
+    isMounted && <dialog id="my_modal_1" className="modal" ref={openResultModalRef}>
 
       <div className="modal-box">
 
