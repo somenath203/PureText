@@ -2,23 +2,21 @@
 
 ## Introduction
 
-PureText is a tool designed to help detect inappropriate or harmful words in sentences. It provides real-time analysis to flag potentially offensive or toxic content. This makes it easy for developers to integrate 
-text safety checks into their own applications, helping to ensure respectful and safe communication across different platforms.
+PureText is a text analysis tool designed to help developers detect and flag inappropriate or harmful words in any given sentence. This tool can be easily integrated into various applications to ensure safer communication and create a more respectful online environment. Using real-time evaluations powered by Upstash's vector database, PureText quickly identifies potentially toxic or offensive content, providing immediate feedback to users.
 
 ## Features of the Application
 
-- **Real-time Text Analysis**: Quickly evaluates any text submitted and detects harmful or inappropriate words.
-- **User-friendly Interface**: Simple and intuitive, making it easy to use for both developers and end-users.
-- **Seamless Integration**: Developers can easily integrate PureText into their applications with minimal setup.
-- **Reliable Detection**: Utilizes a powerful vector database to ensure accurate detection of toxic content.
+- **Real-time text analysis**: Instantly detects inappropriate or harmful words in submitted sentences.
+- **Easy integration**: Developers can seamlessly add PureText to their applications for text analysis.
+- **Safe communication**: Helps ensure respectful language usage across platforms.
+- **User-friendly interface**: Simple and intuitive design for smooth user experience.
 
 ## Technologies Used
 
-- **Hono.js** for the backend API.
-- **Next.js** for the frontend development.
-- **TailwindCSS** and **daisyUI** for responsive and modern styling.
-- **Upstash** as the vector database for storing and retrieving text analysis data.
-- **Cloudflare Workers** for deploying the Hono.js API efficiently.
+- **Backend**: Hono.js
+- **Frontend**: Next.js, TailwindCSS, and daisyUI
+- **Database**: Upstash vector database
+- **Deployment**: Cloudflare Workers and Wrangler for deploying the Hono.js API
 
 ## Deployment
 
