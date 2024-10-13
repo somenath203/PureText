@@ -6,7 +6,7 @@ PureText is a text analysis tool designed to help developers detect and flag ina
 
 ## Features of the Application
 
-- **Real-time text analysis**: Instantly detects inappropriate or harmful words in submitted sentences.
+- **Real-time text analysis**: Instantly detects inappropriate or harmful words in a submitted sentence.
 - **Easy integration**: Developers can seamlessly add PureText to their applications for text analysis.
 - **Safe communication**: Helps ensure respectful language usage across platforms.
 - **User-friendly interface**: Simple and intuitive design for smooth user experience.
