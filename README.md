@@ -1,5 +1,7 @@
 # PureText
 
+![Screenshot (728)](https://github.com/user-attachments/assets/c01ae385-db27-4cc0-87c8-7ca5465b80fb)
+
 ## Introduction
 
 PureText is a text analysis tool designed to help developers detect and flag inappropriate or harmful words in any given sentence. This tool can be easily integrated into various applications to ensure safer communication and create a more respectful online environment. Using real-time evaluations powered by Upstash's vector database, PureText quickly identifies potentially toxic or offensive content, providing immediate feedback to users.
