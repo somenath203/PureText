@@ -47,7 +47,7 @@ const ResultAnalysisModal = ({ openResultModalRef, inputTextOfUser, analysisData
             
             <p className="text-lg flex flex-col gap-2 text-gray-200">
               
-              <span className="font-medium">According to the analysis, the text you provided contains offensive or vulgar language.</span>
+              <span className="font-medium">According to the analysis, the sentence you provided contains offensive or vulgar language.</span>
               
               <span className="text-gray-100">We detected the following possible offensive texts in the sentence you provided:</span>
             
