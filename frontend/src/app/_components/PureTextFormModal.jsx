@@ -114,7 +114,7 @@ const PureTextFormModal = ({ openModalRef }) => {
 
       </dialog>
 
-      <ResultAnalysisModal openResultModalRef={openResultModal} analysisData={result} />
+      <ResultAnalysisModal openResultModalRef={openResultModal} inputTextOfUser={inputText} analysisData={result} />
 
     </>
   );

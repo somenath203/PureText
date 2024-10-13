@@ -1,6 +1,6 @@
 'use client';
 
-const ResultAnalysisModal = ({ openResultModalRef, analysisData }) => {
+const ResultAnalysisModal = ({ openResultModalRef, inputTextOfUser, analysisData }) => {
 
 
   const formatScore = (score) => {
@@ -23,6 +23,14 @@ const ResultAnalysisModal = ({ openResultModalRef, analysisData }) => {
       <div className="modal-box">
 
         <h3 className="font-bold text-xl text-center">Result Analysis</h3>
+
+        <div className="w-full max-w-md bg-indigo-950 text-white text-xl text-center p-4 rounded-lg shadow-md my-4 flex flex-col gap-2">
+
+          <p>Input Text:</p>
+
+          <p className="font-bold">{inputTextOfUser}</p>
+
+        </div>
 
         {analysisData && analysisData?.isProfanity === true ? (
           <div className="flex flex-col gap-6 items-center justify-center text-center mt-6 p-4 rounded-lg shadow-lg">

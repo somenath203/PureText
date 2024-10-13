@@ -12,9 +12,9 @@ const Navbar = () => {
 
         <Link className="flex items-center justify-center gap-1" href='/'>
 
-            <CiText size={45} />
+            <CiText className="size-9 lg:size-10" />
 
-            <span className="text-3xl capitalize tracking-widest roboto-regular">PureText</span>
+            <span className="text-2xl lg:text-3xl capitalize tracking-widest roboto-regular">PureText</span>
 
         </Link>
 
@@ -27,7 +27,7 @@ const Navbar = () => {
 
           <li>
 
-            <Link href='https://github.com/somenath203/' target='_blank'>
+            <Link href='https://github.com/somenath203/PureText' target='_blank'>
 
                 <FaGithub size={30} />
 

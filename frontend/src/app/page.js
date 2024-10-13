@@ -31,11 +31,11 @@ const Page = () => {
   return (
     <div className="min-h-screen flex flex-col items-center w-11/12 m-auto mt-20 gap-8">
 
-      <p className="text-5xl font-bold tracking-wider text-indigo-200">
+      <p className="text-4xl lg:text-5xl font-bold tracking-wider text-indigo-200">
         PureText
       </p>
 
-      <p className="leading-relaxed text-xl w-3/4 text-center roboto-regular">
+      <p className="leading-relaxed text-xl w-11/12 lg:w-3/4 text-center roboto-regular">
         <span className="text-indigo-300 text-2xl font-semibold">PureText</span> is designed to analyze and 
         detect inappropriate or harmful words in a sentence. Utilizing a powerful vector database 
         provided by Upstash, PureText delivers real-time evaluations of text submissions, flagging potentially 
