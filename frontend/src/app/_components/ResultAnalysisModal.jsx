@@ -70,15 +70,15 @@ const ResultAnalysisModal = ({ openResultModalRef, inputTextOfUser, analysisData
               
             <div className="flex flex-col gap-4 p-6 bg-indigo-900 rounded-xl shadow-xl">
 
-              <p className="text-gray-100">According to the analysis, the text provided by you contains no offensive or vulgar language.</p>
+              <div className="text-gray-100">According to the analysis, the text provided by you contains no offensive or vulgar language.</p>
 
-              <p className="flex items-center justify-center gap-2 text-center">
+              <div className="flex flex-col lg:flex-row items-center justify-center gap-2 text-center">
 
                 <span>Score(higher score is worse):</span>
 
                 <span className="font-bold text-indigo-200">{formatScore(analysisData?.score)}</span>
 
-              </p>
+              </div>
 
             </div>
 
