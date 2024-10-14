@@ -18,8 +18,8 @@ PureText is a text analysis tool designed to help developers detect whether a gi
 - **Backend**: Hono.js
 - **Frontend**: Next.js, TailwindCSS, and daisyUI
 - **Database**: Upstash vector database
-- **Deployment**: Cloudflare Workers and Wrangler for deploying the Hono.js API
-- **JavaScript Runtime**: Bun, providing fast and efficient runtime for the server-side code
+- **Deployment**: Cloudflare Workers + Wrangler for deploying the Hono.js API and Vercel for deploying the NextJS application 
+- **JavaScript Runtime**: Bun
 
 ## Deployment
 
