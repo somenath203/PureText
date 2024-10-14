@@ -70,7 +70,7 @@ const ResultAnalysisModal = ({ openResultModalRef, inputTextOfUser, analysisData
               
             <div className="flex flex-col gap-4 p-6 bg-indigo-900 rounded-xl shadow-xl">
 
-              <div className="text-gray-100">According to the analysis, the text provided by you contains no offensive or vulgar language.</p>
+              <div className="text-gray-100">According to the analysis, the text provided by you contains no offensive or vulgar language.</div>
 
               <div className="flex flex-col lg:flex-row items-center justify-center gap-2 text-center">
 
