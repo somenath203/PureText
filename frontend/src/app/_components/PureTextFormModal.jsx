@@ -67,8 +67,6 @@ const PureTextFormModal = ({ openModalRef }) => {
       
     } catch (error) {
       
-      //console.log(error);
-
       toast.error('Something went wrong from the server side. Please try again after sometime.', {
         position: "top-right",
         autoClose: 8000,

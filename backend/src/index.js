@@ -49,7 +49,7 @@ app.get('/', (c) => {
   
   return c.json({
     success: true,
-    message: "Welcome to the PureText AI. This API allows you to analyze and detect the toxicity level of any given sentence, helping to identify inappropriate or harmful language."
+    message: "Welcome to the PureText API. This API allows you to analyze and detect the toxicity level of any given sentence, helping to identify inappropriate or harmful language."
   }, { status: 200 });
 
 });
@@ -153,21 +153,29 @@ app.post('/check-text-toxicity', async (c) => {
 
     ]);
 
-    if (wordsThatAreFlaggedAsProfanity.size > 0) {
-      // Sort flagged words by their score (descending)
-      const profanityWordsSorted = Array.from(wordsThatAreFlaggedAsProfanity).sort((a, b) => a.score > b.score ? -1 : 1);
-    
+    if(wordsThatAreFlaggedAsProfanity.size > 0) {
+
+
+      const profanityScoreAndTextSort = Array.from(wordsThatAreFlaggedAsProfanity).sort((a, b) => {
+
+        return a.score > b.score ? -1 : 1;
+
+      })[0];
+
       return c.json({
         isProfanity: true,
-        flaggedWords: profanityWordsSorted,  // Return all flagged words
+        score: profanityScoreAndTextSort?.score,
       }, { status: 200 });
+
     } else {
+
       const mostProfainedChunk = resFromVectorDB.sort((a, b) => a.score > b.score ? -1 : 1)[0];
-    
+
       return c.json({
         isProfanity: false,
         score: mostProfainedChunk?.score
       }, { status: 200 });
+
     }
 
     
