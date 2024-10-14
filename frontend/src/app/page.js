@@ -37,7 +37,7 @@ const Page = () => {
 
       <p className="leading-relaxed text-xl w-11/12 lg:w-3/4 text-center roboto-regular">
         <span className="text-indigo-300 text-2xl font-semibold">PureText</span> is designed to analyze and 
-        detect inappropriate or harmful words in a sentence. Utilizing a powerful vector database 
+        detect whether any offensive word exists in the given sentence or not. Utilizing a powerful vector database 
         provided by Upstash, PureText delivers real-time evaluations of text submissions, flagging potentially 
         toxic or offensive content. With its user-friendly interface, developers can seamlessly integrate text 
         analysis into their applications, ensuring safer and more respectful communication across platforms.
@@ -46,7 +46,7 @@ const Page = () => {
       <div className='mt-5 flex flex-col lg:flex-row gap-5'>
 
         {featuresOfTheApplication.map((feature) => (
-          <div className="card bg-indigo-900 w-96 shadow-xl" key={feature.id}>
+          <div className="card bg-indigo-900 w-80 lg:w-96 shadow-xl" key={feature.id}>
 
             <div className="card-body flex flex-col gap-5 items-center justify-center">
 
@@ -72,7 +72,7 @@ const Page = () => {
 
       </div>
 
-      <div className="mt-3 flex flex-col gap-4 items-center justify-center">
+      <div className="mt-3 mb-8 flex flex-col gap-4 items-center justify-center">
 
         <span className="text-lg text-indigo-300 tracking-wider">Powered By:</span>
 
