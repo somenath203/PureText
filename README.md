@@ -1,6 +1,6 @@
 # PureText
 
-![Screenshot (728)](https://github.com/user-attachments/assets/8df09dc7-cbf9-4dbd-a665-01be569707f1)
+![Screenshot (729)](https://github.com/user-attachments/assets/87db553d-57f1-4e9a-995e-cb756c8d9d11)
 
 ## Introduction
 
