@@ -52,7 +52,7 @@ const ResultAnalysisModal = ({ openResultModalRef, inputTextOfUser, analysisData
 
               <p className="text-gray-100">According to the analysis, the text provided by you contains offensive or vulgar language.</p>
 
-              <p className="flex items-center justify-center gap-2 text-center">
+              <p className="flex flex-col lg:flex-row items-center justify-center gap-2 text-center">
 
                 <span>Score(higher score is worse):</span>
 
