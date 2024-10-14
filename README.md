@@ -25,4 +25,4 @@ PureText is a text analysis tool designed to help developers detect whether a gi
 
 Live Preview: https://pure-text-som.vercel.app/
 
-HonoJS API: https://puretextsom.somenathchoudhury80.workers.dev/
+PureText HonoJS API: https://puretextsom.somenathchoudhury80.workers.dev/
